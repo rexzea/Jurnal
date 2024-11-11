@@ -1,0 +1,429 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2193b0;
+    --secondary-color: #ffffff;
+    --text-dark: #333;
+    --text-light: #666;
+    --bg-gradient: linear-gradient(135deg, #2193b069 0%, #6dd5ed 100%);
+    --nav-gradient: linear-gradient(to right, #2193b0, #6dd5ed);
+    --card-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    --hover-shadow: 0 8px 25px rgba(33, 147, 176, 0.2);
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--bg-gradient);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Navigation Styles */
+nav {
+    background: var(--nav-gradient);
+    box-shadow: var(--card-shadow);
+    padding: 0.8rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.logo i {
+    font-size: 1.8rem;
+}
+
+nav h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+
+.main-website-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    font-weight: 500;
+}
+
+.btn-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.main-website-btn:hover .btn-overlay {
+    transform: translateX(0);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(33, 147, 176, 0.9), rgba(120, 230, 255, 0.9));
+    padding: 4rem 1rem;
+    margin-top: 60px;
+    text-align: center;
+    color: white;
+}
+
+.hero-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero-section p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Search Styles */
+.search-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.search-box {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 1rem 3rem 1rem 1.5rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    background: white;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+    outline: none;
+    box-shadow: var(--hover-shadow);
+}
+
+.search-box i {
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.search-stats {
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--text-light);
+}
+
+/* Journal Grid Styles */
+.journal-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.journal-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.journal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow);
+}
+
+.journal-img {
+    position: relative;
+    width: 100%;
+    padding-top: 66%; /* 3:2 Aspect ratio */
+}
+
+.journal-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.journal-card:hover .journal-img img {
+    transform: scale(1.05);
+}
+
+.category {
+    position: absolute;
+    top: 0.8rem;
+    left: 0.8rem;
+    background: rgba(33, 147, 176, 0.9);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    z-index: 1;
+}
+
+.journal-content {
+    padding: 1.2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.journal-content h3 {
+    color: var(--text-dark);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+}
+
+.journal-content p {
+    color: var(--text-light);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.journal-meta {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+    font-size: 0.75rem;
+}
+
+.journal-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: var(--nav-gradient);
+    color: white;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(33, 147, 176, 0.3);
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+    .journal-container {
+        gap: 1rem;
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .hero-section h2 {
+        font-size: 2rem;
+    }
+    
+    .hero-section p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-container {
+        padding: 0 1rem;
+    }
+
+    .logo i {
+        font-size: 1.5rem;
+    }
+
+    nav h1 {
+        font-size: 1.2rem;
+    }
+
+    .main-website-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .journal-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .journal-card {
+        border-radius: 8px;
+    }
+
+    .journal-img {
+        padding-top: 75%; /* 4:3 Aspect ratio for mobile */
+    }
+
+    .category {
+        font-size: 0.6rem;
+        padding: 0.2rem 0.5rem;
+        top: 0.5rem;
+        left: 0.5rem;
+    }
+
+    .journal-content {
+        padding: 0.8rem;
+    }
+
+    .journal-content h3 {
+        font-size: 0.75rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .journal-content p {
+        display: none; /* Hide description on mobile */
+    }
+
+    .journal-meta {
+        font-size: 0.6rem;
+        margin-bottom: 0.5rem;
+        gap: 0.5rem;
+    }
+
+    .download-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.7rem;
+        border-radius: 15px;
+    }
+
+    .search-box input {
+        padding: 0.8rem 2.5rem 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-section {
+        padding: 2rem 1rem;
+    }
+
+    .hero-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-section p {
+        font-size: 0.9rem;
+    }
+
+    .search-stats {
+        font-size: 0.8rem;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+
+
+
