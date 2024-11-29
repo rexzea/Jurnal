@@ -22,7 +22,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Navigation Styles */
+
 nav {
     background: var(--nav-gradient);
     box-shadow: var(--card-shadow);
@@ -86,7 +86,6 @@ nav h1 {
     transform: translateX(0);
 }
 
-/* Hero Section */
 .hero-section {
     background: linear-gradient(rgba(33, 147, 176, 0.9), rgba(120, 230, 255, 0.9));
     padding: 4rem 1rem;
@@ -108,7 +107,7 @@ nav h1 {
     margin: 0 auto;
 }
 
-/* Search Styles */
+
 .search-container {
     max-width: 1200px;
     margin: 2rem auto;
@@ -152,7 +151,7 @@ nav h1 {
     color: var(--text-light);
 }
 
-/* Journal Grid Styles */
+
 .journal-container {
     width: 100%;
     max-width: 1200px;
@@ -182,7 +181,7 @@ nav h1 {
 .journal-img {
     position: relative;
     width: 100%;
-    padding-top: 66%; /* 3:2 Aspect ratio */
+    padding-top: 66%; 
 }
 
 .journal-img img {
@@ -270,7 +269,7 @@ nav h1 {
     box-shadow: 0 3px 10px rgba(33, 147, 176, 0.3);
 }
 
-/* Loading Spinner */
+
 .loading-spinner {
     position: fixed;
     top: 0;
@@ -300,7 +299,7 @@ nav h1 {
     100% { transform: rotate(360deg); }
 }
 
-/* Responsive Design */
+
 @media screen and (max-width: 1200px) {
     .journal-container {
         gap: 1rem;
@@ -347,7 +346,7 @@ nav h1 {
     }
 
     .journal-img {
-        padding-top: 75%; /* 4:3 Aspect ratio for mobile */
+        padding-top: 75%; 
     }
 
     .category {
@@ -367,7 +366,7 @@ nav h1 {
     }
 
     .journal-content p {
-        display: none; /* Hide description on mobile */
+        display: none; 
     }
 
     .journal-meta {
@@ -406,7 +405,7 @@ nav h1 {
     }
 }
 
-/* Custom scrollbar */
+
 ::-webkit-scrollbar {
     width: 8px;
 }
