@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Journal Collection</title>
     
-    <!-- Google Fonts -->
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-    <!-- AOS Animation -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     
-    <!-- Custom CSS -->
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation -->
+
     <nav>
         <div class="nav-container">
             <div class="logo">
@@ -49,9 +49,9 @@
         </div>
     </div>
 
-    <!-- Journal Grid -->
+
     <div class="journal-container">
-        <!-- Sample Journal Card 1 -->
+
         <div class="journal-card" data-aos="fade-up">
             <div class="journal-img">
                 <img src="https://via.placeholder.com/300x200" alt="Journal 1">
@@ -73,7 +73,6 @@
 
 
 
-        <!-- Sample Journal Card 2 -->
         <div class="journal-card" data-aos="fade-up" data-aos-delay="100">
             <div class="journal-img">
                 <img src="https://via.placeholder.com/300x200" alt="Journal 2">
@@ -93,7 +92,6 @@
             </div>
         </div>
 
-                <!-- Sample Journal Card 2 -->
                 <div class="journal-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="journal-img">
                         <img src="https://via.placeholder.com/300x200" alt="Journal 2">
@@ -113,7 +111,6 @@
                     </div>
                 </div>
 
-                <!-- Sample Journal Card 2 -->
                 <div class="journal-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="journal-img">
                         <img src="https://via.placeholder.com/300x200" alt="Journal 2">
@@ -133,7 +130,7 @@
                     </div>
                 </div>
 
-                        <!-- Sample Journal Card 2 -->
+
         <div class="journal-card" data-aos="fade-up" data-aos-delay="100">
             <div class="journal-img">
                 <img src="https://via.placeholder.com/300x200" alt="Journal 2">
@@ -153,7 +150,7 @@
             </div>
         </div>
 
-        <!-- Add more journal cards as needed -->
+
     </div>
 
 
@@ -162,18 +159,18 @@
 
 
 
-    <!-- Loading Animation -->
+
     <div class="loading-spinner">
         <div class="spinner"></div>
         <p>Loading journals...</p>
     </div>
 
-    <!-- AOS Animation Script -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     
-    <!-- Custom JavaScript -->
+
     <script>
-        // Initialize AOS
+  
         AOS.init({
             duration: 800,
             offset: 100,
@@ -207,10 +204,10 @@
             resultCount.textContent = count;
         });
 
-        // Initialize count
+
         resultCount.textContent = journalCards.length;
 
-        // Loading animation
+
         window.addEventListener('load', function() {
             document.querySelector('.loading-spinner').style.display = 'none';
         });
